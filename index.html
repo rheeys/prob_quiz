@@ -722,15 +722,48 @@ body::before {
   font-family: var(--serif);
 }
 .quiz-module .quiz-card {
-  background: #fff;
-  border: 1px solid var(--rule);
-  box-shadow: 0 2px 16px rgba(0,0,0,.08);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,.3);
+}
+.quiz-module .quiz-card::before {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
 }
 .quiz-module .result-screen {
-  background: #fff;
-  border: 1px solid var(--rule);
+  background: var(--card);
+  border: 1px solid var(--border);
 }
-.quiz-module h1 { color: var(--ink); }
+.quiz-module .quiz-q { color: var(--text); }
+.quiz-module h1 { color: var(--text); }
+.quiz-module .hero h1 {
+  background: linear-gradient(135deg, #e8e8f5 30%, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* 진행 바 배경 */
+.quiz-module .progress-bar-wrap { background: var(--border); }
+/* 선택지 버튼 */
+.quiz-module .ox-btn {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+.quiz-module .mc-btn {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+.quiz-module .mc-choice-num { background: var(--border); }
+/* 단답형 입력 */
+.quiz-module .short-inp {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+/* 해설 박스 */
+.quiz-module .explanation { background: rgba(108,99,255,.1); border-color: rgba(108,99,255,.25); }
+.quiz-module .trap-reveal { background: rgba(255,209,102,.08); border-color: rgba(255,209,102,.2); }
 </style>
 </head>
 <body>
